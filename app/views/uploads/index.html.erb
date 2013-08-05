@@ -1,0 +1,11 @@
+ <%= form_for @upload, :html => { :multipart => true } do |form| %>
+ 	<%= form.file_field :attachment %>
+ 	<%= form.submit =%>
+ <% end %>
+
+<ul>
+ <% @files.each do |f| %>
+
+ 	<li><a href=<%=f.attachment.url=%>>Link</a></li>
+ <% end %>
+</ul>
